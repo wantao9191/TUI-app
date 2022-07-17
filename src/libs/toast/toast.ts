@@ -1,6 +1,12 @@
 import { createApp, h } from "vue";
 import { Toast } from "./toast.tsx";
-export const toast = function ({ text, duration, mask, instance }: { text: string, duration: number, mask: boolean }) {
+type props = {
+    text: string
+    duration: number
+    mask: boolean
+    instance: any
+}
+export const toast = function ({ text, duration, mask, instance }: props) {
     const dom = document.createElement('div')
     const remove = () => {
         dom.remove()
