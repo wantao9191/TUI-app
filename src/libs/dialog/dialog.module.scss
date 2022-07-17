@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+
     >.content {
         background: #fff;
         width: 90vw;
@@ -12,22 +13,34 @@
         position: absolute;
         top: 20%;
         left: 50%;
-        transform: translate(-50%,50%);
+        transform: translate(-50%, 50%);
         z-index: 1;
         text-align: center;
+
         >header {
             padding: 12px 24px 12px;
         }
+
         >main {
             padding: 12px 24px 12px;
         }
+
         >footer {
             display: flex;
-           
+            border-top: 1px solid #ddd;
+
             >span {
                 text-align: center;
                 flex: 1;
-                padding:  12px;
+                padding: 12px;
+
+                &:first-child {
+                    border-right: 1px solid #ddd;
+                }
+
+                &.confirm {
+                    color: $primary;
+                }
             }
         }
     }

@@ -15,7 +15,7 @@ export const Dialog = defineComponent({
                 <main>{props.content}</main>
                 <footer>
                     <span onClick={onCancel} v-show={props.type === 'confirm'}>取消</span>
-                    <span onClick={onConfirm} >确定</span>
+                    <span onClick={onConfirm} class={d.confirm}>确定</span>
                 </footer>
             </div>
         </div>)
